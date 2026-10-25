@@ -1,0 +1,40 @@
+{
+  "name": "jobapply-agent",
+  "version": "0.3.10",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "node scripts/build.mjs --watch",
+    "build": "tsc --noEmit && node scripts/build.mjs",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "package": "npm run build && node scripts/package.mjs",
+    "format": "prettier --write src tests scripts manifest.json package.json tsconfig.json vitest.config.ts",
+    "preview:ui": "node scripts/preview.mjs",
+    "check:dist": "node scripts/verify-dist.mjs"
+  },
+  "dependencies": {
+    "dexie": "^4.0.11",
+    "mammoth": "^1.9.0",
+    "pdfjs-dist": "^5.4.149",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.24",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "esbuild": "^0.25.0",
+    "fake-indexeddb": "^6.0.0",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

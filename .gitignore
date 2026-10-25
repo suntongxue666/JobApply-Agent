@@ -1,0 +1,21 @@
+node_modules/
+dist/
+release/
+coverage/
+*.local
+.DS_Store
+.preview/
+
+# Local credentials and environment (example configuration may be committed)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs and tool caches
+*.log
+.npm/
+.cache/
+.vite/
+*.tsbuildinfo
